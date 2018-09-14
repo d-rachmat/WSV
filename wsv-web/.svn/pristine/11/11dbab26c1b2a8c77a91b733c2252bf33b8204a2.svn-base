@@ -1,0 +1,346 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"result",
+				"result_code"
+			],
+			[
+				"targe",
+				"targetID"
+			],
+			[
+				"response",
+				"responseBody"
+			],
+			[
+				"respon",
+				"response"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"Vuforia",
+				"VuforiaWebServices"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"image",
+				"image_placeholder"
+			],
+			[
+				"upload",
+				"uploadFileToServer"
+			],
+			[
+				"body",
+				"bodyAsArray"
+			],
+			[
+				"Json",
+				"jsonString"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 15353,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 71.0,
+		"last_filter": "remove pa",
+		"selected_items":
+		[
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Format",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"Package Continstall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 524.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp64/www/MacroCloud-trunk",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices"
+	],
+	"file_history":
+	[
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/API_SetTargetActive.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/SetTargetActive.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/GetTarget.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/UpdateTarget.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/PostNewTarget.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/API_DeleteTarget.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/API_Delete.php",
+		"/C/wamp64/www/MacroCloud-trunk/css/user.css",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/SampleSelector.php",
+		"/C/wamp64/www/MacroCloud-trunk/VuforiaWebServices/GetAllTargets.php",
+		"/C/wamp64/www/MacroCloud/scripts/AjaxTest.php",
+		"/C/wamp64/www/MacroCloud/scripts/API_PostNewTarget.php",
+		"/C/wamp64/www/MacroCloud/scripts/VuforiaWebServices/PostNewTarget.php",
+		"/C/wamp64/bin/php/php5.6.35/php.ini",
+		"/C/wamp64/www/MacroCloud/scripts/VuforiaWebServices/HTTP/Request2.php",
+		"/C/wamp64/www/MacroCloud/scripts/VuforiaWebServices/HTTP/Request2/Exception.php",
+		"/C/Users/Andrew Heartnet/Desktop/Notulen Quick Meeting MINDVOKE Concept.txt",
+		"/D/Dropbox/Shinta VR Management/8. Products/Aws Scripts/AWS-DynamoDB-CommandScripts.txt",
+		"/C/wamp64/www/MacroCloud/scripts/AddNewTarget.php",
+		"/C/wamp64/www/VWS_SampleCode/php/PostNewTarget.php",
+		"/C/Users/Andrew Heartnet/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
+		"/C/Users/Andrew Heartnet/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/README.md",
+		"/C/wamp64/www/VWS_SampleCode/php/GetTarget.php",
+		"/C/wamp64/www/MacroCloud/assets/js/material-dashboard-pro.min.js",
+		"/C/wamp64/www/MacroCloud/scripts/VuforiaWebServices/CheckPHPEnvironment.php",
+		"/C/wamp64/www/VWS_SampleCode/php/UpdateTarget.php",
+		"/C/Users/Andrew Heartnet/AppData/Roaming/Sublime Text 3/Packages/User/CodeFormatter.sublime-settings",
+		"/C/wamp64/www/MacroCloud/js/bootstrap.min.js",
+		"/C/wamp64/www/MacroCloud/assets/js/core/jquery.min.js",
+		"/C/wamp64/www/THEMES/material-dashboard-html-v2.1.0/examples/dashboard.html",
+		"/D/VirtualStorePlatform/1. Scenario Mizone with icon Single/Items_Array.txt",
+		"/C/Users/Andrew Heartnet/Documents/test2.csv",
+		"/D/VirtualStorePlatform/1. Scenario Mizone with icon/Items_Array.txt",
+		"/C/UnrealProjects/VirtualStorePlatform-trunk/Config/DefaultEngine.ini",
+		"/D/VirtualStorePlatform/PriceTag_Array.txt",
+		"/D/VirtualStorePlatform/Shelves_Array.txt",
+		"/D/VirtualStorePlatform/Items_Array.txt",
+		"/C/Users/Andrew Heartnet/Desktop/WU Cafe Progress Update",
+		"/D/Steamworks/SDK/tools/ContentBuilder/scripts/depot_build_735341.vdf",
+		"/D/Steamworks/SDK/tools/ContentBuilder/scripts/app_build_735340.vdf",
+		"/D/Steamworks SDK/tools/ContentBuilder/scripts/app_build_735340.vdf",
+		"/D/Steamworks SDK/tools/ContentBuilder/scripts/depot_build_735341.vdf",
+		"/D/Dropbox/Shinta VR Management/MINDVOKE MEETING/1. MINDVOKE Feedback Meeting Minutes with Ohwada-San.txt",
+		"/C/UnrealProjects/VirtualStorePlatform-trunk/Plugins/VictoryPlugin/Source/VictoryBPLibrary/Public/VictoryBPLibrary.h",
+		"/C/UnrealProjects/VirtualStorePlatform-trunk/Plugins/VictoryPlugin/Source/VictoryBPLibrary/Public/VictoryBPFunctionLibrary.h",
+		"/C/UnrealProjects/VirtualStorePlatform-trunk/Plugins/VictoryPlugin/Source/VictoryBPLibrary/Private/VictoryBPFunctionLibrary.cpp",
+		"/C/SideloadVRInjector/run.bat",
+		"/E/UnrealProjects/VirtualStorePlatform-trunk/Content/VirtualStorePlatform/DataTables/DT_Store.json",
+		"/C/UnrealProjects/VirtualStorePlatform-trunk/Content/VirtualStorePlatform/DataTables/DT_Store.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"obj",
+			"ajax",
+			"toggle-ta",
+			"toggle=tar",
+			"toggle",
+			"toggle'",
+			"checkbox",
+			"checked",
+			"UpdateTarget",
+			"targetimage",
+			"GET",
+			"echo",
+			"target_file",
+			"$_FILES[\"image\"][\"tmp_name\"]",
+			"target_dir",
+			"fileToUpload",
+			"targetName",
+			"include_path",
+			"C:\\php\\pear",
+			"include_path",
+			"targetName",
+			"SignatureBuilder",
+			"setHeaders",
+			"access_key",
+			"form",
+			"logo",
+			"ShelfTableName_11_DA96578842DB5EB51B55DD95E345C0E7",
+			"[===========]",
+			"Array_Sort",
+			"sort",
+			"ce031713d46fd13c02"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12782,
+								12782
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "MacroCloud.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

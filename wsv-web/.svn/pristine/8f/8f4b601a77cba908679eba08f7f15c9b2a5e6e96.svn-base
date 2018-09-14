@@ -1,0 +1,47 @@
+.img-small {
+  width: 32px;
+  height: 32px;
+}
+
+i.icon-blue {
+    color: #00bcd4;
+}
+
+.rating {
+    display: inline-block
+}
+
+.rating span {
+    display: block;
+    width: 90px;
+    height: 16px;
+    background-image: url(../img/rating.png);
+    background-repeat: no-repeat;
+    background-position: 0px -4px;
+    text-indent: -1000em;
+    opacity: .8;
+}
+
+.rating .rating-0 {
+    background-position: 0 -20px
+}
+
+.rating .rating-1 {
+    background-position: 0 -37px
+}
+
+.rating .rating-2 {
+    background-position: 0 -54px
+}
+
+.rating .rating-3 {
+    background-position: 0 -71px
+}
+
+.rating .rating-4 {
+    background-position: 0 -87px
+}
+
+.rating .rating-5 {
+    background-position: 0 -105px
+}

@@ -1,0 +1,177 @@
+<?php  
+
+require_once 'PostNewTarget.php';
+include_once('../externals/getID3-1.9.15/getid3/getid3.php');
+
+ob_start();
+
+// Let's do the check in the beginning, especially the image
+// Check if image file is a actual image or fake image
+if(CheckIsValidMarker()) {
+	echo "Got a valid marker";
+} else {
+	echo "File is not an image.";
+	return;
+}
+
+if(CheckIsValidVideo()) {
+	echo "Got a valid video";
+} else {
+	echo "File is not a valid video.";
+	return;
+}
+
+if(CheckIsValidBackgroundImage()) {
+	echo "Got a valid BG Image";
+} else {
+	echo "File is not valid bg image";
+	return;
+}
+
+// Construct Metadata
+$metadataArr = array('lootbox' => $_POST['lootbox'], 'linipoin' => $_POST['linipoin']);
+
+// Beginning to push the marker to Vuforia
+$instance = new PostNewTarget($_POST['name'], json_encode($metadataArr), $_FILES["marker"]["tmp_name"]);
+$jsonResponse = $instance->GetResponseBody();
+$objResponse = json_decode($jsonResponse, true);
+
+// Upload Marker Image to Server
+$upload_dir = "uploads/";
+$fileExt = strtolower(pathinfo($_FILES["marker"]["name"],PATHINFO_EXTENSION));
+$filePath = $upload_dir . $objResponse['target_id'] . "." . $fileExt;
+
+if (move_uploaded_file($_FILES["marker"]["tmp_name"], $filePath)) {
+	echo "The target marker has been uploaded.";
+} else {
+	echo "Sorry, there was an error uploading your file.";
+}
+
+// Place Video and Background Image file to Unity Environment
+$unity_dir = "C:/UnityProjects/MacroCloud-Unity-trunk/Assets/SharedAssets/Uploads/";
+$asset_dir = $unity_dir . $_POST['name'];
+
+if (!is_dir($asset_dir)) {
+	mkdir($asset_dir, 0777, true);
+}
+
+$videoExt = strtolower(pathinfo($_FILES["video"]["name"],PATHINFO_EXTENSION));
+$videoFilePath = $asset_dir . "/Video." . $videoExt;  
+if (move_uploaded_file($_FILES["video"]["tmp_name"], $videoFilePath)) {
+	echo "The video has been uploaded.";
+} else {
+	echo "Sorry, there was an error uploading your file.";
+}
+
+$bgExt = strtolower(pathinfo($_FILES["background"]["name"],PATHINFO_EXTENSION));
+$bgFilePath = $asset_dir . "/Image." . $bgExt; 
+if (move_uploaded_file($_FILES["background"]["tmp_name"], $bgFilePath)) {
+	echo "The background image has been uploaded.";
+} else {
+	echo "Sorry, there was an error uploading your file.";
+}
+
+ob_end_clean();
+
+echo $jsonResponse;
+
+function CheckIsValidMarker()
+{
+	$check = getimagesize($_FILES['marker']['tmp_name']);
+	if($check !== false) {
+		echo "File is an image - " . $check["mime"] . ".";
+	} else {
+		echo "File is not an image.";
+		return false;
+	}
+
+	// Check file size
+	if ($_FILES["marker"]["size"] > 2000000) {
+		echo "Sorry, cannot upload file that is larger than 2MB.";
+		return false;
+	}
+
+	// Allow certain file formats
+	$fileType = exif_imagetype($_FILES['marker']['tmp_name']);
+	if($fileType != IMAGETYPE_PNG && $fileType != IMAGETYPE_JPEG ) {
+		echo "Sorry, only JPG, & PNG files are allowed.";
+		return false;
+	}
+
+	return true;
+}
+
+function CheckIsValidVideo()
+{
+	// Type contains video/mp4,video/avi,video/mpeg,video/mpg etc
+	if(preg_match('/video\/*/',$_FILES['video']['type'])): 
+		echo "THIS IS A VIDEO FILE : ". $_FILES['video']['type'];
+	else:
+		echo "NOT A VIDEO FILE : " . $_FILES['video']['type'];   
+		return false;        
+	endif;
+
+    // Check file size
+	if ($_FILES["video"]["size"] > 2500000) {
+		echo "Sorry, cannot upload file that is larger than 2MB.";
+		return false;
+	}
+
+	// Limit Extension to mp4 and 3gp
+	$ext = pathinfo($_FILES["video"]["name"])["extension"];
+	if($ext != "3gp" && $ext != "mp4")
+	{
+		return false;
+	}
+
+	// Check resolutions: capped to '800*1280'
+	$getID3 = new getID3;
+	$file = $getID3->analyze($_FILES["video"]["tmp_name"]);
+	$w = (int)$file['video']['resolution_x'];
+	$h = (int)$file['video']['resolution_y'];
+
+	if($w > 800 || $h > 1280)
+	{
+		echo "sorry, the video resolutions are more than 800x1280";
+		return false;
+	}
+
+	return true;
+}
+
+function CheckIsValidBackgroundImage()
+{
+	$check = getimagesize($_FILES['background']['tmp_name']);
+	if($check !== false) {
+		echo "File is an image - " . $check["mime"] . ".";
+	} else {
+		echo "File is not an image.";
+		return false;
+	}
+
+	// Check file size
+	if ($_FILES["background"]["size"] > 1000000) {
+		echo "Sorry, cannot upload file that is larger than 1MB.";
+		return false;
+	}
+
+	// Allow certain file formats
+	$fileType = exif_imagetype($_FILES['background']['tmp_name']);
+	if($fileType != IMAGETYPE_PNG && $fileType != IMAGETYPE_JPEG ) {
+		echo "Sorry, only JPG, & PNG files are allowed.";
+		return false;
+	}
+
+	// Check resolutions: capped to '800*1280'
+	$w = (int)$check[0];
+	$h = (int)$check[1];
+	if($w > 800 || $h > 1280)
+	{
+		echo "sorry, the image resolutions are more than 800x1280. The img resolution is " . $w . "x" . $h;
+		return false;
+	}
+
+	return true;
+}
+
+?>
